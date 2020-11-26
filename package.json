@@ -1,0 +1,47 @@
+{
+  "name": "express-gateway-plugin-skyflow",
+  "version": "0.0.0-development",
+  "description": "Skyflow record api plugin to perform operations on the skyflow vault",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --env=node",
+    "semantic-release": "semantic-release",
+    "build": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyflowapi/express-gateway-skyflow-plugin.git"
+  },
+  "keywords": [
+    "express-gateway",
+    "plugin",
+    "skyflow",
+    "privacy",
+    "pii-data"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skyflowapi/express-gateway-skyflow-plugin/issues"
+  },
+  "homepage": "https://github.com/skyflowapi/express-gateway-skyflow-plugin#readme",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "express-gateway": "^1.10.1",
+    "jest": "^23.2.0",
+    "semantic-release": "^17.3.0",
+    "skyflow-node": "1.0.1-beta.6",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "dependencies": {
+    "form-urlencoded": "^4.2.1"
+  }
+}
