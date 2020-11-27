@@ -1,6 +1,6 @@
 {
   "name": "express-gateway-plugin-skyflow",
-  "version": "0.0.0-development",
+  "version": "0.0.1-beta",
   "description": "Skyflow record api plugin to perform operations on the skyflow vault",
   "main": "lib/index.js",
   "scripts": {

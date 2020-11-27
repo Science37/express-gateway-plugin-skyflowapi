@@ -26,11 +26,11 @@ module.exports = function (client, params, req, res, next) {
             
             async function executePolicy() {
                 let tokens;
-                const query = `select skyflow_id from ${params.records.tableName} where ${params.records.search.searchField}='${req.body[params.records.search.searchKey]}';`
+                const query = `select skyflow_id from ${params.search.tableName} where ${params.search.searchField}='${req.body[params.search.searchKey]}';`
                 await client.query(query)
                     .then(async res => {
                         if (res && res.records && res.records.length > 0 && res.records[0].fields) {
-                            await client.getRecord(params.records.tableName, res.records[0].fields['skyflow_id'], params.records.search.dlp)
+                            await client.getRecord(params.search.tableName, res.records[0].fields['skyflow_id'], params.search.dlp)
                                 .then(tokenData => {
                                     tokens = tokenData.fields
                                 })
@@ -46,7 +46,7 @@ module.exports = function (client, params, req, res, next) {
 
             const serializeFn = contentType === 'application/json' ? JSON.stringify : formurlencoded;
 
-            let bodyData = serializeFn(transformObject(params.records.search.searchField, params.records.search.searchKey, req.body, tokens));
+            let bodyData = serializeFn(transformObject(params.search.searchField, params.search.searchKey, req.body, tokens));
             req.headers['content-length'] = Buffer.byteLength(bodyData);
             req.headers['content-type'] = contentType;
 

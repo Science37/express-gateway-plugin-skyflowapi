@@ -4,17 +4,15 @@ const store = require('./actions/store');
 const search = require('./actions/search');
 
 module.exports = function (params){
-    const client = connect(params.records.workspaceUrl, params.records.vaultId, JSON.parse(fs.readFileSync(params.records.serviceAccountFile)))
+    const client = connect(params.search.workspaceUrl, params.search.vaultId, JSON.parse(fs.readFileSync(params.search.serviceAccountFile)))
 
     return (req, res, next) => {
       
-      if (params.records && params.records.tokenize) {
+      if (params.store) {
         store(params,req,res,next)
       }
-      if (params.records && params.records.search) {
+      if (params.search) {
         search(client,params,req,res,next)
-        // next();
-
       }
       else {
         next();

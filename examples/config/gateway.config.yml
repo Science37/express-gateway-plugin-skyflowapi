@@ -1,0 +1,41 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  host: localhost
+serviceEndpoints: #inbound routes - list of urls you want to intercept.
+  inboundRoute1: 
+    url: 'http://api.science37.com:3000'
+
+apiEndpoints:
+  inboundPath1: #inbound endpoint - list of endpoints you want to intercept.
+    host: '*'
+    paths: ['/api/accounts/','/api/accounts/login']
+
+policies:
+  - proxy
+  - skyflow-api
+pipelines:
+
+  pipeline1:
+    apiEndpoints:
+      - inboundPath1
+    policies:
+
+          - skyflow-api:
+              - action:
+                  search: 
+                    searchField : primary_email
+                    searchKey : e
+                    dlp: TOKEN
+                    tableName: customers
+                    workspaceUrl: na1.area51.vault.skyflowapis.dev
+                    vaultId: u0389f8a2a7711eb835b1a082e471456
+                    serviceAccountFile: './credentials.json'
+
+          - proxy:
+              - action:
+                  serviceEndpoint: inboundRoute1
+              
+                  
+ 

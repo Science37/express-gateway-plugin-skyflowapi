@@ -1,0 +1,13 @@
+{
+  "name": "express-gateway-integration-poc",
+  "description": "Express Gateway Instance Bootstraped from Command Line",
+  "repository": {},
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express-gateway": "^1.16.10",
+    "express-gateway-plugin-body-modifier-example": "^1.0.0",
+    "express-gateway-plugin-skyflow-api": "git+ssh://github.com/skyflowtech/express-gateway-plugin-skyflowapi.git"
+  }
+}
