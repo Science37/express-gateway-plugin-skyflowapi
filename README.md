@@ -13,7 +13,7 @@ Add express-gateway-plugin-skyflowapi to your dependencies
     "express-gateway-plugin-skyflow-api": "git+ssh://github.com/skyflowtech/express-gateway-plugin-skyflowapi.git"
 ```
 
-##Example
+## Example
 A sample gateway with skyflow api policy is present in examples folder. Create a vault in skyflow and replace the params present in the [gateway.config.yml file](/examples/config/gateway.config.yml).
 
 ## Quick start
