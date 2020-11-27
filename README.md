@@ -40,6 +40,6 @@ policies:
             serviceAccountFile: <path to service account file>
 ```
 
-##Documentation
+## Documentation
 
 You can find the complete documentation in [docs](/Docs.md)

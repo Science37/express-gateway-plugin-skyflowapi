@@ -1,14 +1,14 @@
-#Documentation 
+# Documentation 
 
 Actions that we can perform with the request payload are
 
 * [Search Records](#search-records)
 
-##Search Records
+## Search Records
 
 Search the records in the vault to match with a field in the request payload.
 
-###Params
+### Params
 
 
 |  Param   | Description | Default value| Required | Type
@@ -21,7 +21,7 @@ Search the records in the vault to match with a field in the request payload.
 **workspaceUrl** | Skyflow workspace URL| - | yes | string
 **serviceAccountFile** | Path to service account json file| - | yes | string
 
-###Example
+### Example
 
 ```
   - skyflow-api:
