@@ -1,4 +1,4 @@
-# express-gateway-plugin-skyflow
+# express-gateway-plugin-skyflowapi
 
 
 ## Introduction
