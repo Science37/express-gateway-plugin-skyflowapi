@@ -3,31 +3,33 @@
 
 ## Introduction
 
-This plugin for [Express Gateway](https://express-gateway.io) makes it easy to quickly integrate with skyflow vault apis. Plugin  policies when used in express gateway pipelines performs the actions on the request payload to the inbound routes. 
+The Skyflow plugin for [Express Gateway](https://express-gateway.io) helps you to quickly integrate with Skyflow Vault APIs. You can use the plugin policies within Express Gateway Pipelines to perform the actions on the request payload to the inbound routes. 
 
 ## Installation
 
-Add express-gateway-plugin-skyflowapi to your dependencies
+To add express-gateway-plugin-skyflowapi to your dependencies, run the following command:
 
 ```bash
     "express-gateway-plugin-skyflow-api": "git+ssh://github.com/skyflowtech/express-gateway-plugin-skyflowapi.git"
 ```
 
 ## Example
-A sample gateway with skyflow api policy is present in examples folder. Create a vault in skyflow and replace the params present in the [gateway.config.yml file](/examples/config/gateway.config.yml).
+A sample gateway with Skyflow API policy is available in the examples folder. Create a Vault in Skyflow and replace the parameters listed in the [gateway.config.yml file](/examples/config/gateway.config.yml).
 
 ## Quick start
 
-1. Create a vault in skyflow studio and create a service account for the vault. Download the service account credentials.
+1. Create a Vault in Skyflow Studio.  
 
-2. Add the plugin to the system config file
+2. Create a Service Account for the vault. Download the Service Account credentials.
+
+3. Add the plugin to the system config file as follows:
 ```yml
 plugins:
   skyflow-api: {}
 ```
 
 
-3. Add the configuration keys to [gateway.config.yml file](https://www.express-gateway.io/docs/configuration/gateway.config.yml/).
+4. Add the configuration keys to the [gateway.config.yml file](https://www.express-gateway.io/docs/configuration/gateway.config.yml/).
 
 ```yaml
 policies:
@@ -45,4 +47,4 @@ policies:
 
 ## Documentation
 
-You can find the complete documentation in [docs](/Docs.md)
+You can find the complete documentation in the [Documentation](/Docs.md) page.
