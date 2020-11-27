@@ -5,12 +5,12 @@ admin:
   host: localhost
 serviceEndpoints: #inbound routes - list of urls you want to intercept.
   inboundRoute1: 
-    url: 'http://api.science37.com:3000'
+    url: '<your url here>'
 
 apiEndpoints:
   inboundPath1: #inbound endpoint - list of endpoints you want to intercept.
     host: '*'
-    paths: ['/api/accounts/','/api/accounts/login']
+    paths: ['<inbound api endpoints>']
 
 policies:
   - proxy
@@ -25,12 +25,12 @@ pipelines:
           - skyflow-api:
               - action:
                   search: 
-                    searchField : primary_email
-                    searchKey : e
-                    dlp: TOKEN
+                    searchField : primary_email # field name in skyflow
+                    searchKey : <field name in payload> # field name in payload
+                    dlp: TOKEN #policy enforcement in the data to be sent to inbound API
                     tableName: customers
-                    workspaceUrl: na1.area51.vault.skyflowapis.dev
-                    vaultId: u0389f8a2a7711eb835b1a082e471456
+                    workspaceUrl: <your workspace Url>
+                    vaultId: <your vault id>
                     serviceAccountFile: './credentials.json'
 
           - proxy:
