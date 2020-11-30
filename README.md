@@ -7,14 +7,16 @@ The Skyflow plugin for [Express Gateway](https://express-gateway.io) helps you t
 
 ## Installation
 
-To add express-gateway-plugin-skyflowapi to your dependencies, run the following command:
+Add the below dependencies to your package.json file.
 
 ```bash
-    "express-gateway-plugin-skyflow-api": "git+ssh://github.com/skyflowtech/express-gateway-plugin-skyflowapi.git"
+    "express-gateway-plugin-skyflow-api": "git+ssh://github.com/skyflowtech/express-gateway-plugin-skyflowapi.git",
+    "skyflow-node": "1.0.1-beta.6"
+
 ```
 
 ## Example
-A sample gateway with Skyflow API policy is available in the examples folder. Create a Vault in Skyflow and replace the parameters listed in the [gateway.config.yml file](/examples/config/gateway.config.yml).
+A sample gateway with Skyflow API policy is available in the examples folder. Create a Vault in Skyflow and replace the parameters listed in the [gateway.config.yml file](/examples/config/gateway.config.yml).Create a service account and replace credentials.json with it.
 
 ## Quick start
 

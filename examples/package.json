@@ -8,6 +8,7 @@
   "dependencies": {
     "express-gateway": "^1.16.10",
     "express-gateway-plugin-body-modifier-example": "^1.0.0",
-    "express-gateway-plugin-skyflow-api": "git+ssh://github.com/skyflowtech/express-gateway-plugin-skyflowapi.git"
+    "express-gateway-plugin-skyflow-api": "git+https://github.com/skyflowtech/express-gateway-plugin-skyflowapi.git",
+    "skyflow-node": "1.0.1-beta.6"
   }
 }
